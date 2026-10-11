@@ -7,6 +7,9 @@ public struct ResultsView: View {
     @State private var searchText = ""
     @State private var searchResults: [Node] = []
     @State private var searchTask: Task<Void, Never>? = nil
+    @State private var showVirtualAlert = false
+    @State private var virtualAlertTitle = ""
+    @State private var virtualAlertMessage = ""
     
     public var body: some View {
         HStack(spacing: 0) {
@@ -21,7 +24,13 @@ public struct ResultsView: View {
                         selectedID: model.selectedID,
                         onHover: { id in model.selectedID = id },
                         onSelect: { id in 
-                            if id != 0 { model.drillIn(to: id) } 
+                            if id != 0 { 
+                                if id >= UInt32.max - 2 {
+                                    showVirtualExplanation(for: id)
+                                } else {
+                                    model.drillIn(to: id) 
+                                }
+                            } 
                         },
                         onUp: { model.goUp() },
                         onReveal: { id in model.revealInFinder(nodeID: id) },
@@ -167,6 +176,25 @@ public struct ResultsView: View {
         .onChange(of: searchText) { newValue in
             performSearch(query: newValue)
         }
+        .alert(virtualAlertTitle, isPresented: $showVirtualAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(virtualAlertMessage)
+        }
+    }
+    
+    private func showVirtualExplanation(for id: UInt32) {
+        if id == UInt32.max - 1 {
+            virtualAlertTitle = "What is Hidden Space?"
+            virtualAlertMessage = "Hidden space consists of files that SpaceSweep was blocked from scanning due to macOS permissions, as well as APFS system snapshots.\n\nIf hidden space is unusually large, SpaceSweep may not have Full Disk Access. Go to System Settings > Privacy & Security > Full Disk Access, enable SpaceSweep, and click the Rescan button."
+        } else if id == UInt32.max - 2 {
+            virtualAlertTitle = "What is Purgeable Space?"
+            virtualAlertMessage = "Purgeable space consists of temporary system caches, local iCloud file mirrors, and APFS snapshots.\n\nIt is not a browsable folder. macOS automatically purges and reclaims this space whenever you need room for new files."
+        } else {
+            virtualAlertTitle = "What is Free Space?"
+            virtualAlertMessage = "Free space is unallocated, empty space on your hard drive ready for new files."
+        }
+        showVirtualAlert = true
     }
     
     @ViewBuilder
@@ -195,7 +223,10 @@ public struct ResultsView: View {
             }
         }
         .onTapGesture {
-            if isVirtual { return }
+            if isVirtual {
+                showVirtualExplanation(for: child.id)
+                return
+            }
             if child.kind != 0 {
                 model.drillIn(to: child.id)
                 searchText = ""
