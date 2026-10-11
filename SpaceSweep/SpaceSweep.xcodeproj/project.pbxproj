@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		51F3892E307A86240057FD77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F38918307A86220057FD77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51F3891F307A86220057FD77;
+			remoteInfo = SpaceSweep;
+		};
+		51F38938307A86240057FD77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F38918307A86220057FD77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51F3891F307A86220057FD77;
+			remoteInfo = SpaceSweep;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51F38920307A86220057FD77 /* SpaceSweep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceSweep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F3892D307A86240057FD77 /* SpaceSweepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceSweepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F38937307A86240057FD77 /* SpaceSweepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceSweepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		51F38922307A86220057FD77 /* SpaceSweep */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpaceSweep;
+			sourceTree = "<group>";
+		};
+		51F38930307A86240057FD77 /* SpaceSweepTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpaceSweepTests;
+			sourceTree = "<group>";
+		};
+		51F3893A307A86240057FD77 /* SpaceSweepUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpaceSweepUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51F3891D307A86220057FD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		51F3892A307A86240057FD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		51F38934307A86240057FD77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51F38917307A86210057FD77 = {
+			isa = PBXGroup;
+			children = (
+				51F38922307A86220057FD77 /* SpaceSweep */,
+				51F38930307A86240057FD77 /* SpaceSweepTests */,
+				51F3893A307A86240057FD77 /* SpaceSweepUITests */,
+				51F38921307A86220057FD77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51F38921307A86220057FD77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51F38920307A86220057FD77 /* SpaceSweep.app */,
+				51F3892D307A86240057FD77 /* SpaceSweepTests.xctest */,
+				51F38937307A86240057FD77 /* SpaceSweepUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51F3891F307A86220057FD77 /* SpaceSweep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F3893F307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweep" */;
+			buildPhases = (
+				51F3891C307A86220057FD77 /* Sources */,
+				51F3891D307A86220057FD77 /* Frameworks */,
+				51F3891E307A86220057FD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				51F38922307A86220057FD77 /* SpaceSweep */,
+			);
+			name = SpaceSweep;
+			productName = SpaceSweep;
+			productReference = 51F38920307A86220057FD77 /* SpaceSweep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51F3892C307A86240057FD77 /* SpaceSweepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F38942307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweepTests" */;
+			buildPhases = (
+				51F38929307A86240057FD77 /* Sources */,
+				51F3892A307A86240057FD77 /* Frameworks */,
+				51F3892B307A86240057FD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51F3892F307A86240057FD77 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				51F38930307A86240057FD77 /* SpaceSweepTests */,
+			);
+			name = SpaceSweepTests;
+			productName = SpaceSweepTests;
+			productReference = 51F3892D307A86240057FD77 /* SpaceSweepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51F38936307A86240057FD77 /* SpaceSweepUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F38945307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweepUITests" */;
+			buildPhases = (
+				51F38933307A86240057FD77 /* Sources */,
+				51F38934307A86240057FD77 /* Frameworks */,
+				51F38935307A86240057FD77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51F38939307A86240057FD77 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				51F3893A307A86240057FD77 /* SpaceSweepUITests */,
+			);
+			name = SpaceSweepUITests;
+			productName = SpaceSweepUITests;
+			productReference = 51F38937307A86240057FD77 /* SpaceSweepUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51F38918307A86220057FD77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					51F3891F307A86220057FD77 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					51F3892C307A86240057FD77 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 51F3891F307A86220057FD77;
+					};
+					51F38936307A86240057FD77 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 51F3891F307A86220057FD77;
+					};
+				};
+			};
+			buildConfigurationList = 51F3891B307A86220057FD77 /* Build configuration list for PBXProject "SpaceSweep" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51F38917307A86210057FD77;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 51F38921307A86220057FD77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51F3891F307A86220057FD77 /* SpaceSweep */,
+				51F3892C307A86240057FD77 /* SpaceSweepTests */,
+				51F38936307A86240057FD77 /* SpaceSweepUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51F3891E307A86220057FD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		51F3892B307A86240057FD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		51F38935307A86240057FD77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51F3891C307A86220057FD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		51F38929307A86240057FD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		51F38933307A86240057FD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51F3892F307A86240057FD77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51F3891F307A86220057FD77 /* SpaceSweep */;
+			targetProxy = 51F3892E307A86240057FD77 /* PBXContainerItemProxy */;
+		};
+		51F38939307A86240057FD77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51F3891F307A86220057FD77 /* SpaceSweep */;
+			targetProxy = 51F38938307A86240057FD77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		51F3893D307A86240057FD77 /* Debug configuration for PBXProject "SpaceSweep" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51F3893E307A86240057FD77 /* Release configuration for PBXProject "SpaceSweep" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		51F38940307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweep" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		51F38941307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweep" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		51F38943307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweepTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceSweep.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpaceSweep";
+			};
+			name = Debug;
+		};
+		51F38944307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweepTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceSweep.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpaceSweep";
+			};
+			name = Release;
+		};
+		51F38946307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweepUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpaceSweep;
+			};
+			name = Debug;
+		};
+		51F38947307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweepUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72C8K3QB65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jagga.SpaceSweepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpaceSweep;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51F3891B307A86220057FD77 /* Build configuration list for PBXProject "SpaceSweep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F3893D307A86240057FD77 /* Debug configuration for PBXProject "SpaceSweep" */,
+				51F3893E307A86240057FD77 /* Release configuration for PBXProject "SpaceSweep" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		51F3893F307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F38940307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweep" */,
+				51F38941307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweep" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		51F38942307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F38943307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweepTests" */,
+				51F38944307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweepTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		51F38945307A86240057FD77 /* Build configuration list for PBXNativeTarget "SpaceSweepUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F38946307A86240057FD77 /* Debug configuration for PBXNativeTarget "SpaceSweepUITests" */,
+				51F38947307A86240057FD77 /* Release configuration for PBXNativeTarget "SpaceSweepUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51F38918307A86220057FD77 /* Project object */;
+	validationLevel = 1;
+}
