@@ -25,8 +25,12 @@ public struct ResultsView: View {
                         onHover: { id in model.selectedID = id },
                         onSelect: { id in 
                             if id != 0 { 
-                                if id >= UInt32.max - 2 {
+                                if id == AppModel.purgeableNodeID {
+                                    model.drillIn(to: id)
+                                } else if id == UInt32.max || id == UInt32.max - 1 {
                                     showVirtualExplanation(for: id)
+                                } else if id >= AppModel.purgeableItemBaseID {
+                                    model.selectedID = id
                                 } else {
                                     model.drillIn(to: id) 
                                 }
@@ -107,7 +111,7 @@ public struct ResultsView: View {
                 .padding(.bottom, 8)
                 
                 // Path Breadcrumb
-                Text(model.buildURL(for: model.focusID)?.path ?? "/")
+                Text(model.focusID == AppModel.purgeableNodeID ? "/ > purgeable space" : (model.buildURL(for: model.focusID)?.path ?? "/"))
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -117,7 +121,33 @@ public struct ResultsView: View {
                 
                 if searchText.isEmpty {
                     // Standard Folder View
-                    if let store = model.treeStore, store.nodes.count > Int(model.focusID) {
+                    if model.focusID == AppModel.purgeableNodeID {
+                        HStack(alignment: .bottom) {
+                            Text("purgeable space")
+                                .font(.title3)
+                                .fontWeight(.medium)
+                            Spacer()
+                            Text(formatSize(model.currentTotalBytes))
+                                .font(.title3)
+                                .monospacedDigit()
+                        }
+                        .padding(.horizontal)
+                        .padding(.bottom, 4)
+                        
+                        HStack {
+                            Text("System & app caches clearable on macOS.")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Spacer()
+                            Button("⚡️ Purge Caches") {
+                                Task { await model.purgeAllCaches() }
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .controlSize(.small)
+                        }
+                        .padding(.horizontal)
+                        .padding(.bottom, 12)
+                    } else if let store = model.treeStore, store.nodes.count > Int(model.focusID) {
                         let focusNode = store.nodes[Int(model.focusID)]
                         let nameStr = String(decoding: focusNode.nameBytes, as: UTF8.self)
                         HStack(alignment: .bottom) {
@@ -199,7 +229,8 @@ public struct ResultsView: View {
     
     @ViewBuilder
     func row(for child: Node) -> some View {
-        let isVirtual = child.id >= UInt32.max - 2
+        let isVirtualRoot = (child.id == UInt32.max || child.id == UInt32.max - 1 || child.id == AppModel.purgeableNodeID)
+        let isPurgeableItem = child.id >= AppModel.purgeableItemBaseID
         HStack {
             Circle()
                 .fill(colorForNode(child))
@@ -218,13 +249,22 @@ public struct ResultsView: View {
         .background(model.selectedID == child.id ? Color.gray.opacity(0.2) : Color.clear)
         .cornerRadius(6)
         .onHover { isHovering in
-            if isHovering && !isVirtual {
+            if isHovering {
                 model.selectedID = child.id
             }
         }
         .onTapGesture {
-            if isVirtual {
+            if child.id == AppModel.purgeableNodeID {
+                model.drillIn(to: child.id)
+                searchText = ""
+                return
+            }
+            if child.id == UInt32.max || child.id == UInt32.max - 1 {
                 showVirtualExplanation(for: child.id)
+                return
+            }
+            if isPurgeableItem {
+                model.selectedID = child.id
                 return
             }
             if child.kind != 0 {
@@ -237,7 +277,29 @@ public struct ResultsView: View {
             }
         }
         .contextMenu {
-            if !isVirtual {
+            if child.id == AppModel.purgeableNodeID {
+                Button("⚡️ Purge All Caches") {
+                    Task { await model.purgeAllCaches() }
+                }
+            } else if isPurgeableItem {
+                if model.purgeableItemMap[child.id]?.url != nil {
+                    Button("Reveal in Finder") {
+                        model.revealInFinder(nodeID: child.id)
+                    }
+                }
+                Button("Move to Collector Tray") {
+                    model.addToCollector(nodeID: child.id)
+                }
+                if model.purgeableItemMap[child.id]?.url != nil {
+                    Divider()
+                    Button("Move to Trash") {
+                        Task { await model.deleteNode(child.id, immediately: false) }
+                    }
+                    Button("Delete Immediately") {
+                        Task { await model.deleteNode(child.id, immediately: true) }
+                    }
+                }
+            } else if !isVirtualRoot {
                 Button("Reveal in Finder") {
                     model.revealInFinder(nodeID: child.id)
                 }
